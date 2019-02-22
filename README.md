@@ -24,6 +24,7 @@ app.getObjectProperties('skjU').then(function(model){
 ```
 </p></details>
 
+
 O que está acontecendo neste snippet é:
 •	O método getObjectProperties do objeto app retorna as propriedades do objeto com id = “ID DO GRÁFICO”.
 •	Estas propriedades são enviadas como parâmetro para a função de callback, a qual é responsável por chamar o método createCube do objeto app.
@@ -131,5 +132,6 @@ function grafico_valor_cota(reply){
 }
 ```
 </p></details>
+  
   
 O que está acontecendo neste snippet é, itera-se sobre os elementos contidos no qMatrix para gerar um dicionário contendo os dados, no formato aceito pelo construtor do CanvasJS. (Como o gráfico sendo utilizado possui somente um dataPage, é acessado o primeiro elemento do Array).
