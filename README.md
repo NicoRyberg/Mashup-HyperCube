@@ -23,13 +23,13 @@ app.getObjectProperties('skjU').then(function(model){
 });
 ```
 </p></details>
-
-
+</br>
 O que está acontecendo neste snippet é:
-•	O método getObjectProperties do objeto app retorna as propriedades do objeto com id = “ID DO GRÁFICO”.
-•	Estas propriedades são enviadas como parâmetro para a função de callback, a qual é responsável por chamar o método createCube do objeto app.
-•	Este método recebe dois parâmetros, um objeto de definição de hipercubo (explicado no início do documento) e uma função callback, a ser executada sempre que o hipercubo receber novos dados. Esta função recebe como parâmetro um hipercubo.
-
+<ul>
+<li>O método getObjectProperties do objeto app retorna as propriedades do objeto com id = “ID DO GRÁFICO”.</li>
+<li>Estas propriedades são enviadas como parâmetro para a função de callback, a qual é responsável por chamar o método createCube do objeto app.</li>
+<li>Este método recebe dois parâmetros, um objeto de definição de hipercubo (explicado no início do documento) e uma função callback, a ser executada sempre que o hipercubo receber novos dados. Esta função recebe como parâmetro um hipercubo.</li>
+</ul>
 
 Para criar o gráfico, agora, pode ser usada qualquer biblioteca de gráfico do JS. Os dados que serão inseridos nesse gráfico, são retirados do hipercubo recebido na função call-back do método “createCube”.
 Os dados se encontram nos campos “qMatrix” do array “qDataPages”. Segue snippet de código que trata os dados de um HiperCubo para serem inseridos em um gráfico combinado de barras e linha do CanvasJS:
@@ -132,6 +132,5 @@ function grafico_valor_cota(reply){
 }
 ```
 </p></details>
-  
-  
+</br>
 O que está acontecendo neste snippet é, itera-se sobre os elementos contidos no qMatrix para gerar um dicionário contendo os dados, no formato aceito pelo construtor do CanvasJS. (Como o gráfico sendo utilizado possui somente um dataPage, é acessado o primeiro elemento do Array).
