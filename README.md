@@ -4,9 +4,11 @@ Qlik Chart to Native JS Chart, using predefined HyperCube
 ## HyperCubes
 
 Todos os gráficos no Qlik têm um HyperCube atribuído. Este hipercubo tem as definições por padrão do Qlik, com base no tipo de gráfico criado. Por exemplo, algumas das definições são:
-•	Dimensões e measures do gráfico
-•	Condições de cálculo, ou seja, que deve ser cumprida para que os dados do hipercubo sejam (re)calculados, enquanto essas propriedades não sejam atendidas, a engine não executa um novo cálculo.
-•	Link com as propriedades de definição de um hipercubo: https://help.qlik.com/en-US/sense-developer/November2018/apis/EngineAPI/definitions-HyperCubeDef.html
+<ul>
+  <li>Dimensões e measures do gráfico</li>
+  <li>Condições de cálculo, ou seja, que deve ser cumprida para que os dados do hipercubo sejam (re)calculados, enquanto essas propriedades não sejam atendidas, a engine não executa um novo cálculo.</li>
+  <li>Link com as propriedades de definição de um hipercubo: https://help.qlik.com/en-US/sense-developer/November2018/apis/EngineAPI/definitions-HyperCubeDef.html</li>
+</ul>
 
 Com estas definições, pode ser criado um objeto de hipercubo, o qual é responsável por armazenar os dados e metadados do gráfico. Estes dados serão recalculados com base nas condições de cálculo definidas, por exemplo, caso não se tenham restrições de cálculo, a cada nova seleção, os dados são recalculados. Os dados de um hipercubo encontram-se na propriedade “qDataPages”.
 
