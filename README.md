@@ -13,6 +13,7 @@ Com estas definições, pode ser criado um objeto de hipercubo, o qual é respon
 ## Tratando um HyperCube na prática
 
 Para simplificação, criaremos um hipercubo com as definições de hipercubo geradas para um gráfico do Qlik. Para pegar este objeto de definição de hipercubo, e criar um novo hipercubo com as mesmas definições, usa-se o seguinte código:
+
 '''JavaScript
 app.getObjectProperties('skjU').then(function(model){ 
   app.createCube(model.properties.qHyperCubeDef, grafico_valor_cota);
