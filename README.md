@@ -14,11 +14,15 @@ Com estas definições, pode ser criado um objeto de hipercubo, o qual é respon
 
 Para simplificação, criaremos um hipercubo com as definições de hipercubo geradas para um gráfico do Qlik. Para pegar este objeto de definição de hipercubo, e criar um novo hipercubo com as mesmas definições, usa-se o seguinte código:
 
+<details><summary>Code Snippet</summary>
+<p>
+  
 ```JavaScript
 app.getObjectProperties('skjU').then(function(model){ 
   app.createCube(model.properties.qHyperCubeDef, grafico_valor_cota);
 });
 ```
+</p></details>
 
 O que está acontecendo neste snippet é:
 •	O método getObjectProperties do objeto app retorna as propriedades do objeto com id = “ID DO GRÁFICO”.
@@ -28,6 +32,9 @@ O que está acontecendo neste snippet é:
 
 Para criar o gráfico, agora, pode ser usada qualquer biblioteca de gráfico do JS. Os dados que serão inseridos nesse gráfico, são retirados do hipercubo recebido na função call-back do método “createCube”.
 Os dados se encontram nos campos “qMatrix” do array “qDataPages”. Segue snippet de código que trata os dados de um HiperCubo para serem inseridos em um gráfico combinado de barras e linha do CanvasJS:
+
+<details><summary>Code Snippet</summary>
+<p>
 
 ```JavaScript
 function grafico_valor_cota(reply){
@@ -123,5 +130,6 @@ function grafico_valor_cota(reply){
   chart.render();
 }
 ```
-
+</p></details>
+  
 O que está acontecendo neste snippet é, itera-se sobre os elementos contidos no qMatrix para gerar um dicionário contendo os dados, no formato aceito pelo construtor do CanvasJS. (Como o gráfico sendo utilizado possui somente um dataPage, é acessado o primeiro elemento do Array).
